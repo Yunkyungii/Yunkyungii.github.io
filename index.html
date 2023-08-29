@@ -3,13 +3,205 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박윤경01</title>
+    <title>23 lee;'s portfolio</title>
+
+    <link rel="stylesheet" href="./css/style.css?ver=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+    <script src="./js/custom.js?ver=1.0" defer></script>
+
 </head>
 
 <body>
-    <h1>박윤경 010-4011-8499</h1>
+    <div id="skip">
+        <a href="#main">본문바로가기</a>
+    </div>
+
+    <div class="Wrap">
+        <header class="Header">
+            <h1 class="blind">늙은 여우의 포토폴리오</h1>
+            <span class="material-symbols-outlined" aria-hidden="true"> menu </span>
+        </header>
+
+        <main id="main" class="main" role="main">
+            <section class="MainIntro">
+
+                <div class="menu_con">
+                    <ul>
+                        <li><a href="">main</a></li>
+                        <li><a href="">project</a></li>
+                        <li><a href="">training</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+
+                    <div class="box">
+                        <div class="menu">
+                            menu
+                        </div>
+                        <div class="txt">
+                            <h2>park’s portfolio</h2>
+                            <p>2023 <b>박윤경</b> 포토폴리오
+                                <span>너에게 길들여지면 편안해질 수 있을까? </span>
+                            </p>
+                            <strong>늙은 여우와 동행하기, 혹은 여우에게 속지 않기, 앓지 않기 ...</strong>
+                        </div>
+                    </div>
+
+                    <div class="color_box">
+                        <ul>
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                            <li>04</li>
+                            <li>04</li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <!-- <div class="box">
+                            <img src="./images/lee.jpg" alt="">
+                        </div> -->
+                    </figure>
+                </div>
+            </section>
+            <section class="MainProject">
+                <div class="menu_bar">
+
+                </div>
+                <div class="project">
+                    <div class="left">
+                        <h2>사이트 제목</h2>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis voluptatum
+                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem. Voluptatibus dolore
+                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt quibusdam fugiat
+                            sint repellat error soluta placeat.
+                        </div>
+                        <div class="info">
+                            <ul class="color_box">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="font">
+                                <h3>font</h3>
+                            </div>
+                            <div class="process">
+                                <h3>process</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="view">
+                            사진
+                        </div>
+                        <div class="site_link"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="MainContent">
+                <h2 class="blind">장미 해 별 늙은 저녁</h2>
+                <div class="inner content">
+
+                    <div class="itm">
+                        <div class="case">
+                            <figure>
+                                <img src="./images/ggo.jpg" alt="fower">
+                            </figure>
+                            <div class="desc">
+                                <h3>문제는 말이야 <span>장미</span>가 너무 커져버린거야</h3>
+                                <p>바오밥나무들을 내안의 바람과 흔들리게 해버린 거야
+                                    알겠지만 장미는 뽑아버리면 그만이거든
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm">
+                        <div class="case">
+                            <figure>
+                                <img src="./images/bihang.jpg" alt="fower">
+                            </figure>
+                            <div class="desc">
+                                <h3>어느 날 마흔세 번이나 <span>해</span>지는 것을 보았어</h3>
+                                <p>누구나 슬픔에 잠기면 석양을 좋아하게 된다는 걸
+                                    장미와 나는 알고 있었어...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm">
+                        <div class="case">
+                            <figure>
+                                <img src="./images/na.jpg" alt="fower">
+                            </figure>
+                            <div class="desc">
+                                <h3>나는 얼굴이 빨간 신사가 살고 있는 <span>별</span>을 알아</h3>
+                                <p>어느 누구 하나 와도 이별의 말을 해 본적이 없으면서
+                                    '너는 벙어리 여우야!' 라고만 네게 소리쳤겠지...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm">
+                        <div class="case">
+                            <figure>
+                                <img src="./images/boa.jpg" alt="fower">
+                            </figure>
+                            <div class="desc">
+                                <h3><span>길들인다는 건</span> 너무나 쉽게 잊혀져 가는 거지.</h3>
+                                <p>난 네가 필요하지 않고. 장미 역시 내가 필요하지 않아.
+                                    너는 수십만의 여우들과 같은 여우에 불과하니까.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="MainDal">
+                <div class="inner content">
+                    <div class="dal">
+                        <img src="./images/moon.png" alt="">
+                    </div>
+                    <div class="txt">
+                        하
+                        지
+                        만
+
+                        너
+                        에
+                        게
+
+                        길
+                        들
+                        여
+                        지
+                        면
+
+                        편
+                        안
+                        해
+                        질
+
+                        수
+
+                        있
+                        을
+                        까
+                        ?
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
 </body>
 
 </html>

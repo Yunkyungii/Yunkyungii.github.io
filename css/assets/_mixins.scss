@@ -1,0 +1,17 @@
+@mixin res() {
+    @media (width <=390px) {
+        @content;
+    }
+}
+
+@mixin bgm($bg: null) {
+    color: transparent;
+    background: url($bg);
+    -webkit-background-clip: text;
+}
+
+@mixin box() {
+    border-radius: 10rem;
+    border: 1px solid $color-b;
+    padding: 15px;
+}

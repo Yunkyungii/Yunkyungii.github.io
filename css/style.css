@@ -1,0 +1,347 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&display=swap");
+:root {
+  --mc: #339;
+}
+
+html {
+  font-size: 6.25%;
+}
+@media (width <= 390px) {
+  html {
+    font-size: 0.24375vw;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: inherit;
+  font-size: inherit;
+  font-style: normal;
+  word-break: keep-all;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  white-space: nowrap;
+}
+
+p {
+  line-height: 1.25;
+}
+
+body {
+  font-size: 16rem;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #090909;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input,
+button {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  white-space: nowrap;
+}
+
+#skip {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  z-index: 999;
+}
+
+#skip a {
+  display: block;
+  text-align: center;
+  height: 0;
+  line-height: 40px;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+#skip a:focus,
+#skip a:active {
+  height: 40px;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: calc(100% - 80px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40rem;
+}
+
+.Header {
+  position: fixed;
+  inset: 40rem auto auto 40rem;
+}
+.Header span {
+  font-size: 40rem;
+  font-variation-settings: "wght" 100;
+}
+
+.MainIntro {
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+  background: #f9f9f9;
+  padding: 80px;
+  height: 100vh;
+}
+.MainIntro .menu_con {
+  width: 0;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+  border: 1px solid #090909;
+  visibility: hidden;
+}
+.MainIntro .menu_con ul {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.MainIntro .menu_con ul li {
+  flex: 1;
+  font-size: 40px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #090909;
+}
+.MainIntro .menu_con ul li:hover {
+  background: #ff5a00;
+  transition: 0.3s;
+}
+.MainIntro .menu_con.on {
+  width: 600rem;
+  visibility: visible;
+}
+.MainIntro .content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.MainIntro .content .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  border: 1px solid #090909;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px;
+}
+.MainIntro .content .box .menu {
+  line-height: 60px;
+  border: 1px solid #090909;
+  border-radius: 15px;
+  text-align: right;
+}
+.MainIntro .content .box .txt {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.MainIntro .content .box .txt h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 160rem;
+  margin: 0 0 16rem 0;
+}
+.MainIntro .content .box .txt p {
+  order: -1;
+  font-size: 48rem;
+  font-weight: 50;
+  margin: 0 0 40rem 0;
+}
+.MainIntro .content .box .txt p b {
+  font-weight: 700;
+  background: url(/images/OR_3.svg) no-repeat center center/contain;
+}
+.MainIntro .content .box .txt p span {
+  display: block;
+  font-weight: 200;
+  font-size: 30rem;
+}
+.MainIntro .content .box .txt strong {
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 18rem;
+}
+.MainIntro .content > * {
+  flex: 1;
+}
+.MainIntro .content .color_box {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+.MainIntro .content .color_box ul {
+  display: flex;
+  gap: 30px;
+}
+.MainIntro .content .color_box ul li {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+.MainIntro .content .color_box ul li:nth-child(1) {
+  background: #ff5a00;
+}
+.MainIntro .content .color_box ul li:nth-child(2) {
+  background: #abff5a;
+}
+.MainIntro .content .color_box ul li:nth-child(3) {
+  background: #00906c;
+}
+.MainIntro .content .color_box ul li:nth-child(4) {
+  background: #090909;
+}
+.MainIntro .content .color_box ul li:nth-child(5) {
+  background: #f9f9f9;
+}
+.MainIntro .content .color_box ul li:nth-child(6) {
+  background: #8f9193;
+}
+
+.MainProject {
+  height: 100vh;
+}
+.MainProject .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 100%;
+  padding: 80px;
+}
+.MainProject .project .left {
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr;
+  gap: 10px;
+}
+.MainProject .project .left h2 {
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: 900;
+  border-radius: 10px;
+  background: #8f9193;
+  padding: 0 30px;
+}
+.MainProject .project .left .desc {
+  font-size: 18px;
+  line-height: 22px;
+  border: 1px solid #090909;
+  border-radius: 10px;
+  padding: 30px;
+}
+.MainProject .project .left .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.MainProject .project .left .info > * {
+  border: 1px solid #090909;
+  border-radius: 10px;
+  padding: 30px;
+}
+.MainProject .project .right {
+  border: 1px solid #090909;
+  border-radius: 20px;
+}
+
+.MainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  min-height: 600rem;
+}
+.MainContent .content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.MainContent .content .itm {
+  flex: 0 0 100%;
+}
+.MainContent .content .itm .case {
+  display: flex;
+  gap: 100rem;
+}
+.MainContent .content .itm figure {
+  text-align: right;
+}
+.MainContent .content .itm .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.MainContent .content .itm .desc h3 {
+  font-size: 32rem;
+  font-weight: 100;
+  margin: 0 0 16rem 0;
+}
+.MainContent .content .itm .desc h3 span {
+  font-weight: 700;
+}
+.MainContent .content .itm .desc p {
+  font-size: 18rem;
+  font-weight: 400;
+  line-height: 30rem;
+}
+
+.MainDal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120vh;
+}
+.MainDal .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.MainDal .content .txt {
+  writing-mode: vertical-rl;
+  font-family: "Noto Serif KR", serif;
+  font-size: 24rem;
+  letter-spacing: 0.05em;
+}/*# sourceMappingURL=style.css.map */
