@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
 
     <script src="./js/custom.js?ver=1.0" defer></script>
 
@@ -24,21 +25,25 @@
     <div class="Wrap">
         <header class="Header">
             <h1 class="blind">늙은 여우의 포토폴리오</h1>
-            <span class="material-symbols-outlined" aria-hidden="true"> menu </span>
         </header>
 
         <main id="main" class="main" role="main">
-            <section class="MainIntro">
+            <section id="MainIntro" class="MainIntro">
 
                 <div class="menu_con">
                     <ul>
-                        <li><a href="">main</a></li>
-                        <li><a href="">project</a></li>
-                        <li><a href="">training</a></li>
-                        <li><a href="">contact</a></li>
+                        <li><a href="#MainIntro">main</a></li>
+                        <li><a href="#MainProject">project</a></li>
+                        <li><a href="#MainTraining">training</a></li>
+                        <li><a href="#MainContact">contact</a></li>
                     </ul>
+                    <div class="btn">
+                        <span>01</span>
+                        <span>02</span>
+                        <span>03</span>
+                    </div>
                 </div>
-                <div class="content">
+                <div class="inner">
 
                     <div class="box">
                         <div class="menu">
@@ -70,131 +75,413 @@
                     </figure>
                 </div>
             </section>
-            <section class="MainProject">
-                <div class="menu_bar">
-
+            <section id="MainIndex" class="MainIndex">
+                <div class="text_move inner">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio nulla placeat explicabo, maxime
+                        rerum voluptas! Illum!</p>
                 </div>
-                <div class="project">
-                    <div class="left">
-                        <h2>사이트 제목</h2>
-                        <div class="desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis voluptatum
-                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem. Voluptatibus dolore
-                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt quibusdam fugiat
-                            sint repellat error soluta placeat.
+            </section>
+            <section id="MainProject" class="MainProject">
+                <div class="inner">
+                    <content>
+                        <div class="project_wrap">
+                            <div class="project on">
+                                <h2>(주) 원더플레이스</h2>
+                                <div class="con">
+                                    <div class="left">
+                                        <div class="desc">
+                                            고전적인 심플함 안에
+                                            빌롱투게더 만의 유니크함을 담아 제작하였습니다.
+                                            기본적인 선을 지키고자 하였고
+                                            여백의 미를 살리고자 색을 최소화 하였습니다.
+
+                                            <span>
+                                                *본 페이지는 반응형으로 제작되었습니다
+                                                본인 기여도 : 80%
+                                            </span>
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c01">
+                                                <li> f5f5f5</li>
+                                                <li>#e8e8e8</li>
+                                                <li>#131313</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>'Roboto', 'Noto Sans KR', 'Song Myung'</p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>CSS
+                                                    56.1%
+
+                                                    HTML
+                                                    37.7%
+
+                                                    JavaScript
+                                                    6.2%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project09.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="project">
+                                <h2>연세대학교 이과대학</h2>
+                                <div class="con">
+                                    <div class="left">
+                                        <div class="desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis
+                                            voluptatum
+                                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem.
+                                            Voluptatibus
+                                            dolore
+                                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt
+                                            quibusdam
+                                            fugiat
+                                            sint repellat error soluta placeat.
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c02">
+                                                <li>#003876</li>
+                                                <li>#0467b3</li>
+                                                <li>#ffc240</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>pretendard</p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>SCSS
+                                                    44.8%
+
+                                                    CSS
+                                                    29.8%
+
+                                                    HTML
+                                                    21.5%
+
+                                                    JavaScript
+                                                    3.9%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project13.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="project">
+                                <h2>힐스테이트</h2>
+                                <div class="con">
+                                    <div class="left">
+                                        <div class="desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis
+                                            voluptatum
+                                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem.
+                                            Voluptatibus
+                                            dolore
+                                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt
+                                            quibusdam
+                                            fugiat
+                                            sint repellat error soluta placeat.
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c03">
+                                                <li> #961e1e</li>
+                                                <li>#8A7251</li>
+                                                <li> #4D4D4D</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>pretendard</p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>SCSS
+                                                    48.4%
+
+                                                    HTML
+                                                    24.1%
+
+                                                    CSS
+                                                    23.9%
+
+                                                    JavaScript
+                                                    3.6%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project11.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="project">
+                                <h2>강산 건설</h2>
+                                <div class="con">
+                                    <div class="left">
+                                        <div class="desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis
+                                            voluptatum
+                                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem.
+                                            Voluptatibus
+                                            dolore
+                                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt
+                                            quibusdam
+                                            fugiat
+                                            sint repellat error soluta placeat.
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c04">
+                                                <li>#383e8e</li>
+                                                <li>#63b23a</li>
+                                                <li>#655238</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>'Roboto', 'Noto Sans KR</p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>
+                                                    HTML
+                                                    48.3%
+
+                                                    CSS
+                                                    46.9%
+
+                                                    JavaScript
+                                                    4.8%
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project04.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="project">
+                                <h2>텐퍼센트</h2>
+                                <div class="con">
+                                    <div class="left">
+
+                                        <div class="desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis
+                                            voluptatum
+                                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem.
+                                            Voluptatibus
+                                            dolore
+                                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt
+                                            quibusdam
+                                            fugiat
+                                            sint repellat error soluta placeat.
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c05">
+                                                <li>#917056</li>
+                                                <li>#d4b886</li>
+                                                <li>#f9f9f9</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>
+                                                    'Roboto', 'Noto Sans KR', 'Song Myung
+                                                </p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>CSS
+                                                    51.5%
+
+                                                    HTML
+                                                    43.7%
+
+                                                    JavaScript
+                                                    4.8%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project06.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="project">
+                                <h2>분당 서울대학교 병원</h2>
+                                <div class="con">
+                                    <div class="left">
+                                        <div class="desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad hic reiciendis
+                                            voluptatum
+                                            ducimus. Dolorem pariatur illum sequi commodi aperiam non voluptatem.
+                                            Voluptatibus
+                                            dolore
+                                            doloremque aliquam eum minus! Cumque, aut, ut cupiditate aliquam incidunt
+                                            quibusdam
+                                            fugiat
+                                            sint repellat error soluta placeat.
+                                        </div>
+                                        <div class="info">
+                                            <ul class="color_box c06">
+                                                <li>#2D58B5</li>
+                                                <li>#003399</li>
+                                                <li>#F0F8FF</li>
+                                            </ul>
+                                            <div class="font">
+                                                <h3>font</h3>
+                                                <p>Pretendard</p>
+                                            </div>
+                                            <div class="process">
+                                                <h3>process</h3>
+                                                <p>
+                                                    HTML
+                                                    65.7%
+
+                                                    CSS
+                                                    30.3%
+
+                                                    JavaScript
+                                                    4.0%
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="view">
+                                            <img src="./images/sc_project14.png" alt="">
+                                        </div>
+                                        <ul class="site_link">
+                                            <li><a href="">view</a></li>
+                                            <li><a href="">guide</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="info">
-                            <ul class="color_box">
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                        <div class="tab">
+                            <div class="btn">
+                                <span>01</span>
+                                <span>02</span>
+                                <span>03</span>
+                            </div>
+                            <ul class="pr_tab">
+                                <li><a href="">01</a></li>
+                                <li><a href="">02</a></li>
+                                <li><a href="">03</a></li>
+                                <li><a href="">04</a></li>
+                                <li><a href="">05</a></li>
+                                <li><a href="">06</a></li>
                             </ul>
-                            <div class="font">
-                                <h3>font</h3>
-                            </div>
-                            <div class="process">
-                                <h3>process</h3>
-                            </div>
                         </div>
-                    </div>
-                    <div class="right">
-                        <div class="view">
-                            사진
-                        </div>
-                        <div class="site_link"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="MainContent">
-                <h2 class="blind">장미 해 별 늙은 저녁</h2>
-                <div class="inner content">
-
-                    <div class="itm">
-                        <div class="case">
-                            <figure>
-                                <img src="./images/ggo.jpg" alt="fower">
-                            </figure>
-                            <div class="desc">
-                                <h3>문제는 말이야 <span>장미</span>가 너무 커져버린거야</h3>
-                                <p>바오밥나무들을 내안의 바람과 흔들리게 해버린 거야
-                                    알겠지만 장미는 뽑아버리면 그만이거든
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="itm">
-                        <div class="case">
-                            <figure>
-                                <img src="./images/bihang.jpg" alt="fower">
-                            </figure>
-                            <div class="desc">
-                                <h3>어느 날 마흔세 번이나 <span>해</span>지는 것을 보았어</h3>
-                                <p>누구나 슬픔에 잠기면 석양을 좋아하게 된다는 걸
-                                    장미와 나는 알고 있었어...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="itm">
-                        <div class="case">
-                            <figure>
-                                <img src="./images/na.jpg" alt="fower">
-                            </figure>
-                            <div class="desc">
-                                <h3>나는 얼굴이 빨간 신사가 살고 있는 <span>별</span>을 알아</h3>
-                                <p>어느 누구 하나 와도 이별의 말을 해 본적이 없으면서
-                                    '너는 벙어리 여우야!' 라고만 네게 소리쳤겠지...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="itm">
-                        <div class="case">
-                            <figure>
-                                <img src="./images/boa.jpg" alt="fower">
-                            </figure>
-                            <div class="desc">
-                                <h3><span>길들인다는 건</span> 너무나 쉽게 잊혀져 가는 거지.</h3>
-                                <p>난 네가 필요하지 않고. 장미 역시 내가 필요하지 않아.
-                                    너는 수십만의 여우들과 같은 여우에 불과하니까.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    </content>
 
                 </div>
+
             </section>
-            <section class="MainDal">
-                <div class="inner content">
-                    <div class="dal">
-                        <img src="./images/moon.png" alt="">
+            <section id="MainTraining" class="MainTraining">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>My Training</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <div class="txt">
-                        하
-                        지
-                        만
+                    <div class="traning_con">
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                    </div>
+                </div>
 
-                        너
-                        에
-                        게
+            </section>
+            <section id="MainContact" class="MainContact">
+                <div class="inner">
+                    <div class="profile">
 
-                        길
-                        들
-                        여
-                        지
-                        면
-
-                        편
-                        안
-                        해
-                        질
-
-                        수
-
-                        있
-                        을
-                        까
-                        ?
                     </div>
                 </div>
             </section>
