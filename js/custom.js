@@ -85,6 +85,9 @@ BOX.play(3);
 //     }
 
 // });
+
+
+
 const S =
     gsap.from('.project h2', {
         y: -300,
@@ -96,6 +99,7 @@ gsap.from('.project .left', {
     x: -300,
     duration: 2,
     start: "top center",
+
 });
 
 gsap.from('.project .right', {
@@ -111,6 +115,8 @@ gsap.to(S, {
         start: "top center",
     }
 })
+
+
 
 
 const MENU_BTN = document.querySelector('.btn');
@@ -137,7 +143,6 @@ MENU_BTN.addEventListener('click', e => {
     })
 
 });
-
 
 
 
@@ -188,9 +193,14 @@ gsap.from('.MainProject .inner', {
 });
 
 
-
-
-
+gsap.from('.MainContact .inner', {
+    y: 300,
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".MainIndex",
+        start: "top center",
+    }
+})
 
 
 
