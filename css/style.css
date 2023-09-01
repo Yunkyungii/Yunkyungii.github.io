@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 :root {
   --mc: #339;
 }
@@ -44,7 +45,7 @@ p {
 
 body {
   font-size: 16rem;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Lato", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #090909;
   line-height: 1;
   overflow-x: hidden;
@@ -96,9 +97,8 @@ button {
 
 .inner {
   max-width: calc(100% - 80px);
-  width: calc(100% - 50px);
+  width: 100%;
   margin: 0 auto;
-  padding: 0 40rem;
 }
 
 .Header {
@@ -113,16 +113,16 @@ button {
 .MainIntro {
   -webkit-font-smoothing: antialiased;
   background: #f9f9f9;
-  padding: 80px;
   height: 100vh;
+  padding: 100px 0;
 }
 .MainIntro .menu_con {
   position: fixed;
-  left: 80px;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 50px;
-  height: calc(100% - 160px);
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+  width: calc(100% - 160px);
+  height: auto;
   border-radius: 20px;
   overflow: hidden;
   transition: 0.5s;
@@ -136,7 +136,6 @@ button {
   width: 250px;
   height: 100%;
   padding: 20px;
-  flex-direction: column;
   gap: 10px;
   display: none;
 }
@@ -156,20 +155,12 @@ button {
   height: 50px;
   background: #000;
 }
-.MainIntro .menu_con.on {
-  width: 300px;
-}
 .MainIntro .menu_con.on ul {
   display: flex;
 }
 .MainIntro .inner {
   position: relative;
   height: 100%;
-  transition: 0.5s;
-}
-.MainIntro .inner.on {
-  width: calc(100% - 320px);
-  transform: translate(320px, 0);
 }
 .MainIntro .inner .box {
   position: absolute;
@@ -183,46 +174,33 @@ button {
   overflow: hidden;
   padding: 15px;
 }
-.MainIntro .inner .box .menu {
-  line-height: 60px;
-  border: 1px solid #090909;
-  border-radius: 15px;
-  text-align: right;
-}
 .MainIntro .inner .box .txt {
   padding: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.MainIntro .inner .box .txt span {
+  font-weight: 700;
+  font-size: 50px;
+}
 .MainIntro .inner .box .txt h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  font-size: 160rem;
-  margin: 0 0 16rem 0;
+  font-weight: 700;
+  font-size: 160px;
+  margin: 0 0 10px 0;
 }
 .MainIntro .inner .box .txt p {
-  order: -1;
-  font-size: 48rem;
-  font-weight: 50;
-  margin: 0 0 40rem 0;
-}
-.MainIntro .inner .box .txt p b {
-  font-weight: 700;
-  background: url(/images/OR_3.svg) no-repeat center center/contain;
-}
-.MainIntro .inner .box .txt p span {
-  display: block;
+  font-size: 30px;
   font-weight: 200;
-  font-size: 30rem;
 }
-.MainIntro .inner .box .txt strong {
-  font-family: Pretendard;
-  font-weight: 400;
-  font-size: 18rem;
-}
-.MainIntro .inner > * {
-  flex: 1;
+.MainIntro .inner .down_btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #ddd;
+  padding: 20px;
+  border-radius: 50%;
 }
 .MainIntro .inner .color_box {
   position: fixed;

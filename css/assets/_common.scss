@@ -41,7 +41,7 @@ p {
 
 body {
     font-size: 16rem;
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-family: 'Lato', "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     color: $color-b;
     line-height: 1;
     overflow-x: hidden;
@@ -95,8 +95,8 @@ button {
 
 .inner {
     max-width: calc(100% - 80px);
-    width: calc(100% - 50px);
+    width: 100%;
     margin: 0 auto;
-    padding: 0 40rem;
+    // padding: 0 40rem;
 
 }

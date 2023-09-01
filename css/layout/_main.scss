@@ -8,16 +8,16 @@
 
     -webkit-font-smoothing: antialiased;
     background: $color-w;
-    padding: 80px;
     height: 100vh;
+    padding: 100px 0;
 
     .menu_con {
         position: fixed;
-        left: 80px;
-        top: 50%;
-        transform: translate(0, -50%);
-        width: 50px;
-        height: calc(100% - 160px);
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%, 0);
+        width: calc(100% - 160px);
+        height: auto;
         border-radius: 20px;
         overflow: hidden;
         transition: 0.5s;
@@ -31,7 +31,7 @@
             width: 250px;
             height: 100%;
             padding: 20px;
-            flex-direction: column;
+            // flex-direction: column;
             gap: 10px;
             display: none;
 
@@ -56,7 +56,6 @@
         }
 
         &.on {
-            width: 300px;
 
             ul {
                 display: flex;
@@ -68,12 +67,6 @@
     .inner {
         position: relative;
         height: 100%;
-        transition: .5s;
-
-        &.on {
-            width: calc(100% - 320px);
-            transform: translate(320px, 0);
-        }
 
         .box {
             position: absolute;
@@ -87,12 +80,7 @@
             overflow: hidden;
             padding: 15px;
 
-            .menu {
-                line-height: 60px;
-                border: 1px solid $color-b ;
-                border-radius: 15px;
-                text-align: right;
-            }
+
 
             .txt {
                 padding: 80px;
@@ -103,47 +91,37 @@
 
 
 
-
+                span {
+                    font-weight: 700;
+                    font-size: 50px;
+                }
 
 
                 h2 {
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 200;
-                    font-size: 160rem;
-                    margin: 0 0 16rem 0;
+                    font-weight: 700;
+                    font-size: 160px;
+                    margin: 0 0 10px 0;
                 }
 
                 p {
-                    order: -1;
-                    font-size: 48rem;
-                    font-weight: 50;
-                    margin: 0 0 40rem 0;
+                    font-size: 30px;
+                    font-weight: 200;
 
-                    b {
-                        font-weight: 700;
-                        background: url(/images/OR_3.svg)no-repeat center center/contain;
-                    }
-
-                    span {
-                        display: block;
-                        font-weight: 200;
-                        font-size: 30rem;
-                    }
                 }
 
-                strong {
-                    font-family: Pretendard;
-                    font-weight: 400;
-                    font-size: 18rem;
-                }
             }
         }
 
-
-
-        &>* {
-            flex: 1
+        .down_btn {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background: #ddd;
+            padding: 20px;
+            border-radius: 50%;
         }
+
 
         .color_box {
             position: fixed;
