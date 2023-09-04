@@ -14,65 +14,62 @@
     .menu_con {
         position: fixed;
         left: 50%;
-        top: 10px;
+        top: 20px;
         transform: translate(-50%, 0);
+
         width: calc(100% - 80px);
-        height: auto;
-        border-radius: 20px;
-        overflow: hidden;
-        transition: 0.5s;
+        border-radius: 10px;
         border: 1px solid $color-b;
         z-index: 999;
-        padding: 10px 0;
+        padding: 0 20px;
         background: $color-w;
+
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
-        ul {
-            width: 250px;
-            height: 100%;
-            margin: 0 0 20px 0;
-            gap: 10px;
-            display: none;
-            justify-content: center;
 
-            li {
-                flex: 1;
-                font-size: 40px;
-                font-weight: 600;
-                border-radius: 10px;
-                border: 1px solid $color-b;
-
-                &:hover {
-                    background: $color-or;
-                    transition: 0.3s;
-                }
-            }
-        }
 
         .btn {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            position: relative;
+            z-index: 998;
+            padding: 10px 0;
 
-            span {
-                font-size: 0;
-                display: block;
-                height: 3px;
-                width: 30px;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
                 background: $color-b;
-
+                vertical-align: middle;
+                margin: 0 5px 0 0;
             }
-        }
-
-        &.on {
 
             ul {
-                display: flex;
+                position: absolute;
+                right: 0;
+                top: 36px;
+                width: 250px;
+                margin: 0 0 20px 0;
+                z-index: 999;
+
+                li {
+                    flex: 1;
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-align: right;
+                    padding: 2px 0;
+
+                    &:hover {
+                        background: $color-or;
+                        transition: 0.3s;
+                    }
+                }
             }
+
         }
+
 
     }
 
@@ -87,38 +84,69 @@
             transform: translate(-50%, -50%);
             width: 700px;
             height: 700px;
-            // border: 1px solid $color-b;
             background: #fff;
             border-radius: 20px;
             overflow: hidden;
-            padding: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .txt_target {
+                position: absolute;
+                top: 50%;
+                writing-mode: vertical-lr;
+                transform: translate(0, -50%);
+                font-size: 30px;
+                font-weight: 700;
+                color: $color-lg;
+                opacity: 0.5;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .profile {
+                left: 20px;
+            }
+
+            .contact {
+                right: 20px;
+                transform: translate(0, -50%) rotate(180deg);
+            }
 
 
-
-            .txt {
-                padding: 80px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-
+            .center_content {
+                text-align: center;
 
                 span {
+                    display: block;
                     font-weight: 700;
-                    font-size: 50px;
+                    font-size: 30px;
+                    margin: 0 0 30px 0;
                 }
 
 
                 h2 {
                     font-weight: 700;
-                    font-size: 160px;
+                    font-size: 100px;
                     margin: 0 0 30px 0;
+                    transform: rotate(-2deg);
+                    border: 1px solid $color-b;
+                    padding: 5px 50px;
+                    border-radius: 60px;
+                    background: $color-lg;
                 }
 
                 p {
-                    font-size: 30px;
-                    font-weight: 300;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    font-size: 20px;
+                    font-weight: 200;
 
                 }
 
