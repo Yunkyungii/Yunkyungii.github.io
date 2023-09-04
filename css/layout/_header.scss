@@ -1,11 +1,86 @@
 .Header {
     position: fixed;
-    inset: 40rem auto auto 40rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 998;
+    height: 80px;
+    display: flex;
+    align-items: center;
 
-    span {
-        font-size: 40rem;
+    .menu_con {
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid $color-b;
+        z-index: 999;
+        padding: 0 20px;
+        background: $color-w;
 
-        font-variation-settings:
-            'wght' 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+        .btn {
+            z-index: 998;
+            padding: 10px 0;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $color-b;
+                vertical-align: middle;
+                margin: 0 5px 0 0;
+            }
+
+            ul {
+                position: absolute;
+                right: -1px;
+                top: 38px;
+                height: 0;
+                overflow: hidden;
+                transition: 0.3s;
+                z-index: 999;
+
+
+                li {
+                    flex: 1;
+                    font-size: 24px;
+                    font-weight: 300;
+                    padding: 4px 0;
+
+                    &:hover {
+                        background: $color-or;
+                        transition: 0.3s;
+                    }
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: $color-b;
+                        vertical-align: middle;
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+
+        }
+
+        &.on {
+            .btn {
+                ul {
+                    height: 250px;
+                    ;
+                }
+            }
+        }
+
     }
 }

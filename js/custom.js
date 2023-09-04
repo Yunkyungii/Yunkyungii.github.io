@@ -1,91 +1,34 @@
 const panels = gsap.utils.toArray(".MainContent .itm");
 
 
-// const H = gsap.to(panels, {
-//     xPercent: -100 * (panels.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: ".MainContent",
-//         pin: true,
-//         start: "top top",
-
-//         scrub: 0, // 숫자에따라 변함이 있음
-//         markers: true,
-//         snap: {
-//             snapTo: 1 / (panels.length - 1),
-//             inertia: false,
-//             duration: { min: 0.1, max: 0.1 }
-//         },
-//         //end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
-//     }
-// });
-
 const BOX =
-    //     gsap.from('.MainIntro .box', {
-    //         width: "700px",
-    //         height: "700px",
-    //     });
+    gsap.from('.MainIntro .box', {
+        width: 700,
+        height: 700,
+        scale: 0.6,
+        delay: 1,
+        pin: true
+    });
 
-    // gsap.to('.MainIntro .box', {
-    //     width: "400px",
-    //     height: "400px",
-    //     start: "top 50px",
-    //     left: "50%", top: "50%",
-    //     delay: 1,
-    // })
+// gsap.to('.center_content h2', {
+//     rotate: -4,
+//     delay: 2,
+//     duration: 1,
+//     ease: Back.easeIn,
+// })
 
-    // gsap.to('.MainIntro .box', {
-    //     width: "85%",
-    //     height: "85%",
-
-    //     delay: 2,
-    // });
-    // gsap.to('.MainIntro .box', {
-    //     width: "calc(100%)",
-    //     height: "20%",
-    //     left: "50%", top: "80%",
-
-    //     delay: 3,
-    // });
-    gsap.to('.MainIntro .box', {
-        height: "calc(100%)",
-        width: "calc(100%)",
-        left: "50%", top: "50%",
-        // delay: 4,
-    })
-
-BOX.play(3);
+gsap.from('.menu_con', {
+    top: -100,
+    start: "bottom bottom",
+})
+gsap.from('.box span', {
+    opacity: 0,
+    top: -50,
+    delay: 2,
+})
 
 
 
-// const T = document.querySelector('#to_top');
-// T.addEventListener('click', () => {
-//     gsap.to(window, { scrollTo: 0, duration: 1 })
-// });
-
-
-
-// const D = gsap.to('.MainDal .dal', {
-//     x: 400,
-//     y: 1000,
-//     rotation: 720,
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: ".MainDal",
-//         pin: true,
-//         start: "top top",
-//         end: "+=1600",
-//         scrub: 0, // 숫자에따라 변함이 있음
-//         //markers: true
-//         // snap: {
-//         //     snapTo: 1 / (panels.length - 1),
-//         //     inertia: false,
-//         //     duration: { min: 0.1, max: 0.1 }
-//         // },
-//         //end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
-//     }
-
-// });
 
 
 
@@ -121,7 +64,7 @@ gsap.to(S, {
 
 
 const MENU_BTN = document.querySelector('.btn');
-const MENU = document.querySelector('.MainIntro .menu_con');
+const MENU = document.querySelector('.menu_con');
 const CON = document.querySelector('.inner')
 //const BTN = document.querySelector('.btn');
 
@@ -148,12 +91,7 @@ MENU_BTN.addEventListener('click', e => {
 
 
 
-// $('.menu_tab ul>li').on('click', function (e) {
-//     e.preventDefault();
-//     let idx = $(this).index();
-//     $('.project_wrap>*').eq(idx).addClass('on').siblings().removeClass('on');
 
-// });
 
 const M = document.querySelector('.pr_tab');
 const MT = document.querySelectorAll('.pr_tab a');

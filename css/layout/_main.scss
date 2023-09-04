@@ -7,71 +7,11 @@
 .MainIntro {
 
     -webkit-font-smoothing: antialiased;
-    background: $color-w;
+    background: $color-bg;
     height: 100vh;
-    padding: 100px 0;
-
-    .menu_con {
-        position: fixed;
-        left: 50%;
-        top: 20px;
-        transform: translate(-50%, 0);
-
-        width: calc(100% - 80px);
-        border-radius: 10px;
-        border: 1px solid $color-b;
-        z-index: 999;
-        padding: 0 20px;
-        background: $color-w;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    padding: 80px 0;
 
 
-
-        .btn {
-            position: relative;
-            z-index: 998;
-            padding: 10px 0;
-
-            &::before {
-                content: "";
-                display: inline-block;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: $color-b;
-                vertical-align: middle;
-                margin: 0 5px 0 0;
-            }
-
-            ul {
-                position: absolute;
-                right: 0;
-                top: 36px;
-                width: 250px;
-                margin: 0 0 20px 0;
-                z-index: 999;
-
-                li {
-                    flex: 1;
-                    font-size: 30px;
-                    font-weight: 600;
-                    text-align: right;
-                    padding: 2px 0;
-
-                    &:hover {
-                        background: $color-or;
-                        transition: 0.3s;
-                    }
-                }
-            }
-
-        }
-
-
-    }
 
     .inner {
         position: relative;
@@ -82,8 +22,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 700px;
-            height: 700px;
+            width: 100%;
+            height: 100%;
             background: #fff;
             border-radius: 20px;
             overflow: hidden;
@@ -92,36 +32,38 @@
             align-items: center;
             justify-content: center;
 
-            .txt_target {
+            .ic1 {
                 position: absolute;
-                top: 50%;
-                writing-mode: vertical-lr;
-                transform: translate(0, -50%);
-                font-size: 30px;
-                font-weight: 700;
+                left: 32%;
+                top: 30%;
+                font-size: 50px;
                 color: $color-lg;
-                opacity: 0.5;
-                cursor: pointer;
-
-                &:hover {
-                    opacity: 1;
-                }
+                transform: rotate(-15deg);
             }
 
-            .profile {
-                left: 20px;
+            .ic2 {
+                position: absolute;
+                right: 35%;
+                bottom: 48%;
+                font-size: 30px;
+                color: $color-lg;
+                transform: rotate(30deg);
             }
 
-            .contact {
-                right: 20px;
-                transform: translate(0, -50%) rotate(180deg);
+            .ic3 {
+                position: absolute;
+                right: 40%;
+                top: 20%;
+                font-size: 20px;
+                color: $color-lg;
+                transform: rotate(15deg);
             }
 
 
             .center_content {
                 text-align: center;
 
-                span {
+                strong {
                     display: block;
                     font-weight: 700;
                     font-size: 30px;
@@ -141,35 +83,31 @@
                 }
 
                 p {
-                    position: absolute;
-                    bottom: 40px;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-                    font-size: 20px;
-                    font-weight: 200;
+                    display: block;
+                    font-weight: 700;
+                    font-size: 30px;
+                    margin: 0 0 100px 0;
 
                 }
 
+                .explore {
+
+                    padding: 0 0 5px 0;
+                    border-bottom: 1px solid $color-lg;
+
+                    font-size: 20px;
+                    font-weight: 300;
+
+                    i {
+                        margin: 0 0 0 10px;
+                    }
+                }
+
             }
+
+
         }
 
-        .down_btn {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            background: $color-w;
-            font-size: 24px;
-            padding: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.4s ease;
-
-            &:hover {
-                background: $color-or;
-                color: $color-w;
-            }
-        }
 
 
         .color_box {
@@ -677,6 +615,47 @@
                         }
                     }
 
+                }
+            }
+        }
+    }
+}
+
+.MainContent {
+
+    background: $color-g;
+    padding: 80px 0;
+    height: 100vh;
+
+    .inner {
+        display: flex;
+        gap: 8px;
+        // width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        >* {
+            flex: 1;
+            border-radius: 20px;
+        }
+
+        .left {
+            background: $color-w;
+        }
+
+        .right {
+            position: sticky;
+
+            ul {
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 4px;
+
+                li {
+                    border-radius: 20px;
+                    background: $color-or;
                 }
             }
         }
