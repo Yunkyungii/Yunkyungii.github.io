@@ -40,12 +40,15 @@
             ul {
                 position: absolute;
                 right: -1px;
-                top: 38px;
-                height: 0;
+                top: -100%;
+                opacity: 0;
+                height: 200px;
+                width: 200px;
                 overflow: hidden;
                 transition: 0.3s;
                 z-index: 999;
-
+                border-radius: 30px;
+                background: rgba($color: $color-g, $alpha: 0.5);
 
                 li {
                     flex: 1;
@@ -76,8 +79,8 @@
         &.on {
             .btn {
                 ul {
-                    height: 250px;
-                    ;
+                    opacity: 1;
+                    top: 38px;
                 }
             }
         }

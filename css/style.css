@@ -140,11 +140,15 @@ button {
 .Header .menu_con .btn ul {
   position: absolute;
   right: -1px;
-  top: 38px;
-  height: 0;
+  top: -100%;
+  opacity: 0;
+  height: 200px;
+  width: 200px;
   overflow: hidden;
   transition: 0.3s;
   z-index: 999;
+  border-radius: 30px;
+  background: rgba(143, 145, 147, 0.5);
 }
 .Header .menu_con .btn ul li {
   flex: 1;
@@ -167,7 +171,8 @@ button {
   margin: 0 15px 0 0;
 }
 .Header .menu_con.on .btn ul {
-  height: 250px;
+  opacity: 1;
+  top: 38px;
 }
 
 .MainIntro {
@@ -179,6 +184,7 @@ button {
 .MainIntro .inner {
   position: relative;
   height: 100%;
+  padding: 0 80px;
 }
 .MainIntro .inner .box {
   position: absolute;
@@ -303,49 +309,61 @@ button {
 
 .MainProject {
   position: relative;
-  padding: 100px 0;
   background: #f9f9f9;
-}
-.MainProject::before {
-  content: "";
-  background: url(/images/curve.svg) no-repeat center center;
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 400px;
-  height: 40px;
-}
-.MainProject .inner .content {
   display: flex;
+  align-items: center;
+}
+.MainProject .inner {
+  position: relative;
+}
+.MainProject .inner .tab {
+  position: absolute;
+  top: 80px;
+  right: 160px;
+  border-radius: 20px;
+  line-height: 100px;
+  z-index: 998;
+}
+.MainProject .inner .tab ul {
   height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.MainProject .inner .tab ul li a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 50%;
+}
+.MainProject .inner .tab ul li a.on {
+  background: #abff5a;
+}
+.MainProject .inner .project_wrap {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.MainProject .inner .project_wrap .project {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+.MainProject .inner .project_wrap .project .pr_itm {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   background: #fff;
   border-radius: 20px;
   padding: 80px;
 }
-.MainProject .inner .content .tab {
-  flex: 1 0 100px;
-  border-radius: 20px;
-}
-.MainProject .inner .content .tab ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.MainProject .inner .content .tab ul li {
-  padding: 15px 0;
-  font-size: 20px;
-  font-weight: 700;
-}
-.MainProject .inner .content .project_wrap .project {
-  display: none;
-  height: 100%;
-  flex-direction: column;
-}
-.MainProject .inner .content .project_wrap .project h2 {
+.MainProject .inner .project_wrap .project .pr_itm h2 {
   position: relative;
   font-size: 50px;
   line-height: 100px;
@@ -354,41 +372,42 @@ button {
   padding: 0 30px;
   margin: 0 0 20px 0;
 }
-.MainProject .inner .content .project_wrap .project .con {
+.MainProject .inner .project_wrap .project .pr_itm .con {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   height: 100%;
 }
-.MainProject .inner .content .project_wrap .project .con .left {
+.MainProject .inner .project_wrap .project .pr_itm .con .left {
   border-radius: 20px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
 }
-.MainProject .inner .content .project_wrap .project .con .left .desc {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .desc {
   font-size: 18px;
   line-height: 22px;
   background: #f7f7f7;
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px;
+  line-height: 1.4;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info > * {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info > * {
   border-radius: 10px;
   padding: 30px;
   background: #f7f7f7;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info > * h3 {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info > * h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 10px 0;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box {
   font-size: 0;
   padding: 0;
   overflow: hidden;
@@ -397,88 +416,88 @@ button {
   gap: 5px;
   background: #fff;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box li {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box li {
   flex: 1;
   border-radius: 10px;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c01 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c01 li:nth-child(1) {
   background: #f5f5f5;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c01 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c01 li:nth-child(2) {
   background: #e8e8e8;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c01 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c01 li:nth-child(3) {
   background: #131313;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c02 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c02 li:nth-child(1) {
   background: #003876;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c02 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c02 li:nth-child(2) {
   background: #0467b3;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c02 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c02 li:nth-child(3) {
   background: #ffc240;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c03 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c03 li:nth-child(1) {
   background: #961e1e;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c03 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c03 li:nth-child(2) {
   background: #8A7251;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c03 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c03 li:nth-child(3) {
   background: #4D4D4D;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c04 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c04 li:nth-child(1) {
   background: #383e8e;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c04 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c04 li:nth-child(2) {
   background: #63b23a;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c04 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c04 li:nth-child(3) {
   background: #655238;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c05 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c05 li:nth-child(1) {
   background: #917056;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c05 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c05 li:nth-child(2) {
   background: #d4b886;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c05 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c05 li:nth-child(3) {
   background: #f9f9f9;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c06 li:nth-child(1) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c06 li:nth-child(1) {
   background: #2D58B5;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c06 li:nth-child(2) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c06 li:nth-child(2) {
   background: #003399;
 }
-.MainProject .inner .content .project_wrap .project .con .left .info .color_box.c06 li:nth-child(3) {
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box.c06 li:nth-child(3) {
   background: #F0F8FF;
 }
-.MainProject .inner .content .project_wrap .project .con .right {
+.MainProject .inner .project_wrap .project .pr_itm .con .right {
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-.MainProject .inner .content .project_wrap .project .con .right .view {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .view {
   overflow: hidden;
   height: 400px;
   border-radius: 20px;
   margin: 0 0 40px 0;
   border: 1px solid #f7f7f7;
 }
-.MainProject .inner .content .project_wrap .project .con .right .view img {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .view img {
   transform: translate(0, 0);
 }
-.MainProject .inner .content .project_wrap .project .con .right .view:hover img {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .view:hover img {
   transition: 2s;
   transform: translate(0, calc(-100% + 400px));
 }
-.MainProject .inner .content .project_wrap .project .con .right .site_link {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .site_link {
   display: flex;
   gap: 10px;
 }
-.MainProject .inner .content .project_wrap .project .con .right .site_link li {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .site_link li {
   position: relative;
   background: #f7f7f7;
   text-align: center;
@@ -487,7 +506,7 @@ button {
   overflow: hidden;
   z-index: 998;
 }
-.MainProject .inner .content .project_wrap .project .con .right .site_link li a {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .site_link li a {
   display: inline-block;
   padding: 25px 0;
   width: 100%;
@@ -495,7 +514,7 @@ button {
   font-size: 18px;
   font-weight: 700;
 }
-.MainProject .inner .content .project_wrap .project .con .right .site_link li::after {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .site_link li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -507,18 +526,15 @@ button {
   transform-origin: left;
   z-index: -1;
 }
-.MainProject .inner .content .project_wrap .project .con .right .site_link li:hover::after {
+.MainProject .inner .project_wrap .project .pr_itm .con .right .site_link li:hover::after {
   transform: scaleX(1);
   transition: 0.4s ease-in;
 }
-.MainProject .inner .content .project_wrap .project.on {
-  display: flex;
-}
-.MainProject .inner .content .menu {
+.MainProject .inner .menu {
   flex: 1 0 100px;
   border-radius: 20px;
 }
-.MainProject .inner .content .menu .btn span {
+.MainProject .inner .menu .btn span {
   font-size: 0;
   display: block;
   height: 3px;
@@ -526,17 +542,65 @@ button {
   background: #090909;
   margin: 0 0 5px 0;
 }
-.MainProject .inner .content .menu ul {
+.MainProject .inner .menu ul {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.MainProject .inner .content .menu ul li {
+.MainProject .inner .menu ul li {
   padding: 15px 0;
   font-size: 20px;
   font-weight: 700;
+}
+
+.MainTraining {
+  background: #f9f9f9;
+  padding: 100px 0;
+}
+.MainTraining .tit {
+  margin: 0 0 60px 0;
+  text-align: center;
+}
+.MainTraining .tit h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.MainTraining .tit p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.MainTraining .traning_con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.MainTraining .traning_con .con {
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px;
+}
+.MainTraining .traning_con .con .img_box {
+  height: 300px;
+  background: #8f9193;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 0 30px 0;
+}
+.MainTraining .traning_con .con h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.MainTraining .traning_con .con span {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #8f9193;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
 .MainContact {
@@ -595,34 +659,82 @@ button {
 }
 
 .MainContent {
+  position: relative;
   background: #8f9193;
-  padding: 80px 0;
   height: 100vh;
 }
 .MainContent .inner {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   height: 100%;
   overflow: hidden;
+  height: 100vh;
 }
 .MainContent .inner > * {
   flex: 1;
-  border-radius: 20px;
 }
 .MainContent .inner .left {
   background: #f9f9f9;
+  overflow: hidden;
+}
+.MainContent .inner .left .img_slide {
+  height: 100%;
+}
+.MainContent .inner .left .img_slide .itm {
+  position: relative;
+  height: 100%;
+}
+.MainContent .inner .left .img_slide .itm .img_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 312px;
+  width: 622px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .MainContent .inner .right {
-  position: sticky;
+  background: #f9f9f9;
+  overflow: hidden;
 }
-.MainContent .inner .right ul {
+.MainContent .inner .right .text_slide {
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 4px;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
-.MainContent .inner .right ul li {
-  border-radius: 20px;
-  background: #ff5a00;
+.MainContent .inner .right .itm {
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.MainContent .inner .right .itm .txt_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition: 1s;
+}
+.MainContent .inner .right .itm.swiper-slide-active .txt_box {
+  transform: translate(-50%, -50%);
+}
+.MainContent .arrow {
+  position: absolute;
+  z-index: 998;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1600px;
+  width: 100%;
+  font-size: 30px;
+}
+.MainContent .arrow .left {
+  position: absolute;
+  left: 0;
+}
+.MainContent .arrow .right {
+  position: absolute;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */

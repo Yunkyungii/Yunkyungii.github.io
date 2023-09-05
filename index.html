@@ -12,7 +12,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/custom.js?ver=1.0" defer></script>
 
 </head>
@@ -67,19 +69,19 @@
                     </figure>
                 </div>
             </section>
-            <section id="MainIndex" class="MainIndex">
+            <!-- <section id="MainIndex" class="MainIndex">
                 <div class="text_move inner">
                     <p> INDEX <br>
                         MY PROJECT<br>
                         TRAINING<br>
                         CONTACT</p>
                 </div>
-            </section>
+            </section> -->
             <section id="MainProject" class="MainProject">
                 <div class="inner">
-                    <div class="content">
-                        <div class="project_wrap">
-                            <div class="project on">
+                    <div class="project_wrap" id="panels-container">
+                        <div class="project" id="project01">
+                            <div class="pr_itm">
                                 <h2>(주) 원더플레이스</h2>
                                 <div class="con">
                                     <div class="left">
@@ -125,15 +127,17 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="project">
+
+
+                        </div>
+                        <div class="project" id="project02">
+                            <div class="pr_itm">
                                 <h2>연세대학교 이과대학</h2>
                                 <div class="con">
                                     <div class="left">
                                         <div class="desc">
-                                            클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                            사용해보았습니다.
+
                                             <span>
                                                 *본 페이지는 반응형으로 제작되었습니다
                                                 본인 기여도 : 80%
@@ -175,15 +179,18 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="project">
+
+
+                        </div>
+                        <div class="project" id="project03">
+                            <div class="pr_itm">
                                 <h2>힐스테이트</h2>
                                 <div class="con">
                                     <div class="left">
                                         <div class="desc">
-                                            클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                            사용해보았습니다.
+                                            풀페이지를 이용하여 재구성하였습니다.
+                                            공간을 시원하게 사용하고 선과 폰트를 얇게 사용해 깔끔하게 정보를 전달하도록 제작하였습니다.
                                             <span>
                                                 *본 페이지는 반응형으로 제작되었습니다
                                                 본인 기여도 : 80%
@@ -225,18 +232,21 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="project">
+
+
+                        </div>
+                        <div class="project" id="project04">
+                            <div class="pr_itm">
                                 <h2>강산 건설</h2>
                                 <div class="con">
                                     <div class="left">
                                         <div class="desc">
-                                            클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                            사용해보았습니다.
+                                            마우스 오버와 스크롤 시 다양한 이벤트를 형성하여 역동적으로 제작하였습니다.
+
                                             <span>
                                                 *본 페이지는 반응형으로 제작되었습니다
-                                                본인 기여도 : 80%
+                                                본인 기여도 : 70%
                                             </span>
                                         </div>
                                         <div class="info">
@@ -274,19 +284,22 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="project">
+
+
+                        </div>
+                        <div class="project" id="project05">
+                            <div class="pr_itm">
                                 <h2>텐퍼센트</h2>
                                 <div class="con">
                                     <div class="left">
 
                                         <div class="desc">
-                                            클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                            사용해보았습니다.
+                                            브랜드의 부드러운 이미지를 살리기 위해 둥근 모서리와 따뜻한 톤으로 구성하였고
+                                            다양한 마우스 호버 효과를 통해 역동적인 분위기로 제작하였습니다.
                                             <span>
                                                 *본 페이지는 반응형으로 제작되었습니다
-                                                본인 기여도 : 80%
+                                                본인 기여도 : 100%
                                             </span>
                                         </div>
                                         <div class="info">
@@ -324,18 +337,21 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="project">
+
+
+                        </div>
+                        <div class="project" id="project06">
+                            <div class="pr_itm">
                                 <h2>분당 서울대학교 병원</h2>
                                 <div class="con">
                                     <div class="left">
                                         <div class="desc">
-                                            클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                            사용해보았습니다.
+                                            병원 사이트 특성을 반영해 퀵메뉴를 한눈에 보기 쉽게 구성하였고
+                                            많은 내용을 한눈에 보기 쉽도록 플렉스와 그리드를 이용해 다양하게 배치하여 제작했습니다.
                                             <span>
                                                 *본 페이지는 반응형으로 제작되었습니다
-                                                본인 기여도 : 80%
+                                                본인 기여도 : 100%
                                             </span>
                                         </div>
                                         <div class="info">
@@ -375,221 +391,86 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="tab">
-                            <ul class="pr_tab">
-                                <li><a href="">01</a></li>
-                                <li><a href="">02</a></li>
-                                <li><a href="">03</a></li>
-                                <li><a href="">04</a></li>
-                                <li><a href="">05</a></li>
-                                <li><a href="">06</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                </div>
-
-            </section>
-            <section id="MainContent" class="MainContent">
-                <div class="inner">
-                    <div class="left">
-                        <div class="project on">
-                            <h2>(주) 원더플레이스</h2>
-                            <div class="con">
-                                <div class="left">
-                                    <div class="desc">
-                                        클론코딩으로 디자인을 최대한 똑같이 구현하려고 노력했습니다. 본 홈페이지와는 달리 풀페이지를 사용하여 공간을 조금 더 넓게
-                                        사용해보았습니다.
-
-                                        <span>
-                                            *본 페이지는 반응형으로 제작되었습니다
-                                            본인 기여도 : 80%
-                                        </span>
-                                    </div>
-                                    <div class="info">
-                                        <ul class="color_box c01">
-                                            <li> f5f5f5</li>
-                                            <li>#e8e8e8</li>
-                                            <li>#131313</li>
-                                        </ul>
-                                        <div class="font">
-                                            <h3>font</h3>
-                                            <p>'Roboto', 'Noto Sans KR', 'Song Myung'</p>
-                                        </div>
-                                        <div class="process">
-                                            <h3>process</h3>
-                                            <p>CSS
-                                                56.1%
-
-                                                HTML
-                                                37.7%
-
-                                                JavaScript
-                                                6.2%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="view">
-                                        <img src="./images/sc_project09.png" alt="">
-                                    </div>
-                                    <ul class="site_link">
-                                        <li><a href="https://yunkyungii.github.io/project09/">view</a></li>
-                                        <li><a href="">guide</a></li>
-                                    </ul>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
-                    <div class="right">
-                        <ul>
-                            <li><a href="">project01</a></li>
-                            <li><a href="">project02</a></li>
-                            <li><a href="">project03</a></li>
-                            <li><a href="">project04</a></li>
-                            <li><a href="">project05</a></li>
-                            <li><a href="">project06</a></li>
+                    <div class="tab">
+                        <ul class="pr_tab">
+                            <li><a href="#project01" class="anchor">01</a></li>
+                            <li><a href="#project02" class="anchor">02</a></li>
+                            <li><a href="#project03" class="anchor">03</a></li>
+                            <li><a href="#project04" class="anchor">04</a></li>
+                            <li><a href="#project05" class="anchor">05</a></li>
+                            <li><a href="#project06" class="anchor">06</a></li>
                         </ul>
                     </div>
                 </div>
-            </section>
-            <section class="section--big--padding">
-                <div class="container">
-                    <div class="intro-text">
-                        <h1>We strive to be the best on and off the field.</h1>
-                        <p>Of by spineless, just precipitate, and profitable anyone avoided name valuable console
-                            endeavours, pursuit the what simply. His to expectations. Have that of and tone threw please
-                            to multitude interesting for the that the reflections, they studies past, of to and
-                            mountains, makers a we impenetrable class. Physics do been.</p>
-                    </div>
-                    <div class="sticky-sidebar">
-                        <nav class="sticky-sidebar__nav">
-                            <h3 class="sticky-sidebar__title">Find the best team</h3>
-                            <ul>
-                                <li><a class="sticky-sidebar__link is-active" href="#link1">Academy</a></li>
-                                <li><a class="sticky-sidebar__link" href="#link2">Performance weeks</a></li>
-                                <li><a class="sticky-sidebar__link" href="#link3">Camps</a></li>
-                                <li><a class="sticky-sidebar__link" href="#link3">Social program</a></li>
-                            </ul>
-                        </nav>
-                        <div class="sticky-sidebar__content">
-                            <div id="link1" class="sticky-sidebar__item">
-                                <h2>A comfort zone off the field.</h2>
-                                <p>Mars each the with between to harmonic from it funds excessive avoid from use.
-                                    Rivalry. Both in I even a so in you how me. Or lowest it as both a it furnished you
-                                    if many venerable, in picture in was through who they attention will which continued
-                                    yet salutary.</p>
-                            </div>
-                            <div id="link2" class="sticky-sidebar__item">
-                                <h2>Performance–the most season.</h2>
-                                <p>Quite instruments, fully suspicion nice, few to duties, for funny has and, was and of
-                                    would house. Nothing was way. Overall explain him either you concept? Creative a
-                                    pointing not a best. <br /> <br />Purpose everything be young which frequency; Do.
-                                    Of the after kind process her back there far we and the funds word cognitive where
-                                    they not is hard the leaves the searching to right the our he had my size to too. Of
-                                    recently of that rush future represent of the contract, have bulk; Evaluation gone
-                                    even about is frequencies then think sofa not, want a raising about dishonourable.
-                                </p>
-                            </div>
-                            <div id="link3" class="sticky-sidebar__item">
-                                <h2>Camps for inclusive goals.</h2>
-                                <p>People of sleep set that and evening. Great got how being such, made take began
-                                    reached small much initial been oh, just them, clock attempt. To talk self-interest
-                                    are city point to of by officers attribute designer negatives, were hired it
-                                    extended privilege needed we every slid of presented the.
-                                    <br />
-                                    <br />
-                                    Quite instruments, fully suspicion nice, few to duties, for funny has and, was and
-                                    of would house. Nothing was way. Overall explain him either you concept? Creative a
-                                    pointing not a best. Purpose everything be young which frequency; Do. Of the after
-                                    kind process her back there far we and the funds word cognitive where they not is
-                                    hard the leaves the searching to right the our he had my size to too. Of recently of
-                                    that rush future represent of the contract, have bulk; Evaluation gone even about is
-                                    frequencies then think sofa not, want a raising about dishonourable.
-                                    <br />
-                                    <br />
-                                    On curiously, gave place windshield officers, go more middle velocity cache of each
-                                    fie physics before the defined with salesmen you our a film ask years, keep using be
-                                    because empty the he showed sense the in that there frugality he business links a
-                                    copy. Client bed particular, blind he men facility were hung that they for to didn't
-                                    going it the to parks. Which after to the in and could five. Of and a been I up sad.
-                                    Distance, texts. Get stuffed death, accurately his generally, itch it the she
-                                    defined it what claim world woke a his phase.
-                                </p>
-                            </div>
-                            <div id="link4" class="sticky-sidebar__item">
-                                <h2>A comfort zone off the field.</h2>
-                                <p>Mars each the with between to harmonic from it funds excessive avoid from use.
-                                    Rivalry. Both in I even a so in you how me. Or lowest it as both a it furnished you
-                                    if many venerable, in picture in was through who they attention will which continued
-                                    yet salutary.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="inner">
-                <div class="tit">
-                    <h2>My Training</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="traning_con">
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                    <div class="con">
-                        <div class="img_box">
-                            img1
-                        </div>
-                        <h3>실습1</h3>
-                        <span>#fullpage</span>
-                        <span>#sass</span>
-                    </div>
-                </div>
-            </div>
 
-            </section> -->
+            </section>
+
+            <section id="MainTraining" class="MainTraining">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>My Training</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="traning_con">
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                        <div class="con">
+                            <div class="img_box">
+                                img1
+                            </div>
+                            <h3>실습1</h3>
+                            <span>#fullpage</span>
+                            <span>#sass</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            </section>
             <section id="MainContact" class="MainContact">
                 <div class="inner">
                     <h2>contact me</h2>

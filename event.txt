@@ -35,3 +35,21 @@ gsap.to('.MainIntro .box', {
 })
 
 BOX.play(3);
+
+//txt event
+let typeSplit = new SplitType('.text_move p', {
+    types: 'lines, words, chars',
+    tagName: 'span'
+})
+
+gsap.from('.word', {
+    y: '100%',
+    opacity: 0,
+    duration: 0.55,
+    ease: 'power3.out',
+    stagger: 0.15,
+    scrollTrigger: {
+        trigger: ".MainIndex",
+        start: "top center",
+    }
+})
