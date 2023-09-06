@@ -1,28 +1,9 @@
 
-const BOX =
-    gsap.from('.MainIntro .box', {
-        width: 700,
-        height: 700,
-        scale: 0.6,
-        delay: 1,
-        pin: true
-    });
 
-// gsap.to('.center_content h2', {
-//     rotate: -4,
-//     delay: 2,
-//     duration: 1,
-//     ease: Back.easeIn,
-// })
-
-gsap.from('.menu_con', {
-    top: -100,
-    start: "bottom bottom",
-})
 gsap.from('.box span', {
     opacity: 0,
-    top: -50,
-    delay: 2,
+    y: -100,
+    duration: 0.8,
 })
 
 
@@ -30,34 +11,74 @@ gsap.from('.box span', {
 
 
 
-const S =
-    gsap.from('.project h2', {
-        y: -300,
-        duration: 2,
-        start: "top center",
+
+
+
+// 메뉴이동
+let links = gsap.utils.toArray(".pr_nav ul li a");
+
+links.forEach(link => {
+    let element = document.querySelector(link.getAttribute("href"));
+    let linkST = ScrollTrigger.create({
+        trigger: element,
+        start: "top top"
     });
 
-gsap.from('.project .left', {
-    x: -300,
-    duration: 2,
-    start: "top center",
-
-});
-
-gsap.from('.project .right', {
-    x: 300,
-    duration: 2,
-    start: "top center",
-});
-
-
-gsap.to(S, {
-    scrollTrigger: {
-        trigger: ".MainProject",
+    ScrollTrigger.create({
+        trigger: element,
         start: "top center",
-    }
-})
+        end: "bottom center",
+        onToggle: self => setActive(link)
+    });
 
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: e.target.hash,
+            overwrite: "auto"
+        })
+    })
+});
+
+function setActive(link) {
+    links.forEach(el => el.classList.remove("active"));
+    link.classList.add("active");
+}
+
+
+
+
+
+// 여러개 이질감 표현하기
+gsap.utils.toArray(".project").forEach(item => {
+    gsap.from(item, {
+        scale: 0.9,
+        // '-webkit-filter': 'saturate(0.1)',
+        //  yPercent: 10,
+        ease: "none",
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "center center",
+            scrub: 0.2,
+        },
+    })
+});
+
+// 한번에 이질감 표현하기
+gsap.from('.traning_con', {
+    scale: 0.9,
+    ease: "none",
+    duration: 0.5,
+    scrollTrigger: {
+        trigger: '.traning_con',
+        start: "top bottom",
+        end: "center center",
+        scrub: 0.2,
+    },
+})
 
 
 
@@ -72,7 +93,7 @@ MENU_BTN.addEventListener('click', e => {
     MENU.classList.toggle('on');
     CON.classList.toggle('on');
 
-    const LINK = document.querySelectorAll('.menu_con a');
+    const LINK = document.querySelectorAll('.gnb a');
 
 
     LINK.forEach((it, idx) => {
@@ -182,60 +203,4 @@ MENU_BTN.addEventListener('click', e => {
 //     links.forEach(el => el.classList.remove("active"));
 //     link.classList.add("active");
 // }
-
-
-/* Main navigation */
-let panelsSection = document.querySelector("#MainProject"),
-    panelsContainer = document.querySelector("#panels-container"),
-    tween;
-
-const anchors = document.querySelectorAll(".anchor");
-
-
-anchors.forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        anchors.forEach(it => it.classList.remove('on'))
-        e.target.classList.add('on');
-
-        let targetElem = document.querySelector(e.target.getAttribute("href")),
-            y = targetElem;
-        if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
-            let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
-                totalMovement = (panels.length - 1) * targetElem.offsetWidth;
-            y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
-        }
-        gsap.to(window, {
-            scrollTo: {
-                y: y,
-                autoKill: false
-            },
-            duration: 1,
-        });
-
-    });
-});
-
-
-
-
-/* Panels */
-const panels = gsap.utils.toArray("#panels-container .project");
-tween = gsap.to(panels, {
-    xPercent: -100 * (panels.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: "#MainProject",
-        pin: true,
-        start: "top top",
-        scrub: 1,
-        snap: {
-            snapTo: 1 / (panels.length - 1),
-            inertia: false,
-            duration: { min: 0.1, max: 0.1 }
-        },
-        end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
-    }
-});
 

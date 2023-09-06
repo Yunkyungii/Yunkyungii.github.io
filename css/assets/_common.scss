@@ -1,12 +1,12 @@
 :root {
-    --mc: #{$color-main};
+    //--mc: #{$color-main};
 }
 
 html {
-    font-size: 6.25%;
+    //font-size: 6.25%;
 
     @include res() {
-        font-size: 0.24375vw;
+        // font-size: 0.24375vw;
     }
 
     ;
@@ -40,7 +40,7 @@ p {
 }
 
 body {
-    font-size: 16rem;
+    //font-size: 16rem;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     color: $color-b;
     line-height: 1;
@@ -93,8 +93,37 @@ button {
     overflow: hidden;
 }
 
-.inner {
-    max-width: calc(100% - 80px);
-    width: 100%;
-    margin: 0 auto;
+section {
+    background: $color-bg;
 }
+
+.inner {
+    // max-width: calc(100% - 80px);
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.title {
+    max-width: 1440px;
+    margin: 0 auto 80px auto;
+    padding: 0 15px;
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 0 20px 0;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}
+
+
+// maxwidth 1440, guttuer 30 , padding 15
