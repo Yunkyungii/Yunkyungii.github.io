@@ -1,4 +1,18 @@
+// const HEADER = document.querySelector('.Header');
 
+// window.addEventListener('scroll', () => {
+//     const sct = window.scrollY;
+//     sct > 0
+//         ? HEADER.classList.add('on')
+//         : HEADER.classList.remove('on');
+// });
+
+gsap.from('.Header', {
+    opacity: 0,
+    y: -100,
+    duration: 0.8,
+    delay: 1,
+})
 
 gsap.from('.box span', {
     opacity: 0,
@@ -10,16 +24,29 @@ gsap.from('.box span', {
 // BOX.repeat(-1);
 
 
-
-
+gsap.fromTo('.pr_nav', {
+    xPercent: 100,
+    opacity: 0,
+},
+    {
+        xPercent: 0,
+        opacity: 1,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: '.MainProject',
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play reverse play reverse"
+        },
+    })
 
 
 // 메뉴이동
-let links = gsap.utils.toArray(".pr_nav ul li a");
+const links = gsap.utils.toArray(".pr_nav ul li a");
 
 links.forEach(link => {
-    let element = document.querySelector(link.getAttribute("href"));
-    let linkST = ScrollTrigger.create({
+    const element = document.querySelector(link.getAttribute("href"));
+    const linkST = ScrollTrigger.create({
         trigger: element,
         start: "top top"
     });
@@ -53,7 +80,7 @@ function setActive(link) {
 // 여러개 이질감 표현하기
 gsap.utils.toArray(".project").forEach(item => {
     gsap.from(item, {
-        scale: 0.9,
+        scale: 0.8,
         // '-webkit-filter': 'saturate(0.1)',
         //  yPercent: 10,
         ease: "none",
@@ -69,7 +96,7 @@ gsap.utils.toArray(".project").forEach(item => {
 
 // 한번에 이질감 표현하기
 gsap.from('.traning_con', {
-    scale: 0.9,
+    scale: 0.8,
     ease: "none",
     duration: 0.5,
     scrollTrigger: {
@@ -79,6 +106,9 @@ gsap.from('.traning_con', {
         scrub: 0.2,
     },
 })
+
+
+
 
 
 
