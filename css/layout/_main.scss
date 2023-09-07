@@ -431,17 +431,17 @@
 
         @include res() {
             .pr_nav {
-                bottom: 20px;
+                bottom: 40px;
                 right: 50%;
                 transform: translate(50%, 0);
-                padding: 15px 25px;
+                padding: 15px 20px;
                 border-radius: 20px;
                 box-shadow: 0 0 20px rgba($color: $color-bg, $alpha: 0.8);
 
                 ul {
                     height: auto;
                     flex-direction: inherit;
-                    gap: 10px;
+                    gap: 0;
 
                     li {
                         a {
