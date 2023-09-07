@@ -45,6 +45,10 @@
         }
     }
 
+    .mo_btn {
+        display: none;
+    }
+
     @include res() {
         .inner {
             flex-direction: column;
@@ -59,5 +63,81 @@
             }
         }
 
+        .mo_btn {
+            position: fixed;
+            top: 30px;
+            right: 15px;
+            display: block;
+            width: 30px;
+            height: 20px;
+            z-index: 999;
+
+            span {
+                font-size: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $color-b;
+            }
+
+            .s1 {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+            }
+
+            .s2 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, 0);
+                transition: 0.5s;
+            }
+
+            .s3 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, 0);
+                transition: 0.5s;
+            }
+
+            .s4 {
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 0);
+            }
+
+            &.on {
+                .s1 {
+                    display: none;
+                }
+
+                .s2 {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, 0) rotate(45deg);
+                }
+
+                .s3 {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, 0) rotate(-45deg);
+                }
+
+                .s4 {
+                    display: none;
+                }
+            }
+        }
+
+
+
     }
+
+
 }

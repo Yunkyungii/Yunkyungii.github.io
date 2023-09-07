@@ -124,6 +124,78 @@
     }
 }
 
+.MainIndex {
+    padding: 160px 0;
+
+    .text_move {
+        p {
+            position: relative;
+            font-size: 80px;
+            font-weight: 500;
+            text-align: center;
+            display: block;
+            padding: 5px 0;
+
+            span {
+                z-index: 998;
+                background: $color-dg;
+                font-size: 16px;
+                // font-weight: 900;
+                padding: 10px 20px;
+                border-radius: 30px;
+            }
+        }
+
+        .move_l {
+            span {
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: rotate(5deg);
+            }
+        }
+
+        .move_r {
+            span {
+                position: absolute;
+                bottom: 50%;
+                right: 40%;
+                transform: rotate(-5deg);
+            }
+        }
+
+    }
+
+    @include res() {
+        padding: 80px 0;
+
+        .text_move {
+            p {
+                font-size: 40px;
+
+                span {
+                    font-size: 12px;
+                    padding: 5px 15px;
+                    border-radius: 30px;
+                }
+            }
+
+            .move_l {
+                span {
+                    transform: rotate(3deg);
+                }
+            }
+
+            .move_r {
+                span {
+                    transform: rotate(-3deg);
+                }
+            }
+
+        }
+    }
+
+}
 
 
 
@@ -185,8 +257,6 @@
                 overflow: hidden;
 
                 .pr_itm {
-                    // display: flex;
-                    // flex-direction: column;
                     background: #fff;
                     box-shadow: 0 0 40px rgba($color: $color-bg, $alpha: 0.5);
                     border-radius: 20px;
@@ -216,12 +286,18 @@
 
                             .desc {
                                 font-size: 18px;
-                                line-height: 22px;
+                                line-height: 24px;
                                 // border: 1px solid $color-b;
                                 background: $color-bg;
                                 border-radius: 10px;
                                 padding: 40px;
-                                line-height: 1.4;
+
+
+                                span {
+                                    font-size: 15px;
+                                    color: $color-g;
+                                    display: block;
+                                }
                             }
 
                             .info {
@@ -238,6 +314,10 @@
                                         font-size: 18px;
                                         font-weight: 700;
                                         margin: 0 0 10px 0;
+
+                                        p {
+                                            font-weight: 15px;
+                                        }
                                     }
 
                                 }
@@ -351,7 +431,6 @@
                             display: flex;
                             flex-direction: column;
                             overflow: hidden;
-                            // order: -1;
 
                             .view {
                                 overflow: hidden;
@@ -479,6 +558,10 @@
                                     font-size: 14px;
                                     line-height: 18px;
                                     padding: 20px;
+
+                                    span {
+                                        font-size: 12px;
+                                    }
                                 }
 
                                 .info {
