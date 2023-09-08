@@ -811,4 +811,83 @@
         }
 
     }
+
+    @include res() {
+        .inner {
+
+
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, calc(-50% - 180px));
+                font-size: 30px;
+                font-weight: 700;
+
+                &::after {
+                    display: none;
+                }
+
+            }
+
+            figure {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 240px;
+                height: 240px;
+
+            }
+
+            .name {
+                transform: translate(-50%, calc(-50% + 240px));
+
+                p {
+                    margin: 0 0 40px 0;
+                }
+
+                .contact {
+                    gap: 10px;
+
+                    >li {
+                        width: 60px;
+                        height: 60px;
+
+                        a {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            .skills {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% + 400px), -50%);
+
+                strong {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                span {
+                    line-height: 20px;
+                    font-weight: 300;
+                }
+
+                ul {
+                    margin: 0 0 10px 0;
+
+                    li {
+                        line-height: 20px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
 }
