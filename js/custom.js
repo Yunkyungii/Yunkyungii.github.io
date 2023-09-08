@@ -73,6 +73,7 @@ mm.add("(min-width: 800px)", () => {
 mm.add("(max-width: 768px)", () => {
     gsap.fromTo('.pr_nav', {
         yPercent: 100,
+        x: 0,
         opacity: 0,
     },
         {
@@ -167,7 +168,6 @@ NAV.forEach((it, idx) => {
             scrollTo: e.target.hash
         })
     });
-    N.classList.remove('on');
 });
 // 모바일
 M.addEventListener("click", function (e) {
@@ -199,26 +199,5 @@ SKIP.addEventListener("click", e => {
 
 
 
-
-
-
-
-// const COVER_BTN = document.querySelector('.util');
-// const COVER = document.querySelector('.cover');
-// const COVER_A = document.querySelectorAll('.cover>ul a')
-
-// COVER_BTN.addEventListener('click', function (e) {
-//     e.currentTarget.classList.toggle('on');
-//     //this.classList.toggle('on');
-//     COVER.classList.toggle('on');
-// });
-
-// COVER_A.forEach((lnk, idx) => {
-//     lnk.addEventListener('click', () => {
-//         COVER.classList.remove('on');
-//         COVER_BTN.classList.remove('on');
-//         console.log(idx);
-//     });
-// });
 
 
