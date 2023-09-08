@@ -73,11 +73,12 @@ mm.add("(min-width: 800px)", () => {
 mm.add("(max-width: 768px)", () => {
     gsap.fromTo('.pr_nav', {
         yPercent: 100,
-        x: 0,
+        x: "50%",
         opacity: 0,
     },
         {
             yPercent: 0,
+            x: "50%",
             opacity: 1,
             duration: 0.5,
             scrollTrigger: {

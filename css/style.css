@@ -110,7 +110,7 @@ section {
   font-weight: 700;
   letter-spacing: 2px;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .title {
     margin: 0 auto 40px auto;
   }
@@ -160,7 +160,7 @@ section {
 .Header .mo_btn {
   display: none;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .Header .inner {
     flex-direction: column;
     align-items: baseline;
@@ -360,7 +360,7 @@ section {
 .MainIntro .box .center_content .explore i {
   margin: 0 0 0 10px;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .MainIntro .box .center_content strong {
     font-size: 30px;
     margin: 0 0 20px 0;
@@ -413,7 +413,7 @@ section {
   right: 40%;
   transform: rotate(-5deg);
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .MainIndex {
     padding: 80px 0;
   }
@@ -658,12 +658,12 @@ section {
   transform: scaleX(1);
   transition: 0.4s ease-in;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .MainProject .inner .pr_nav {
-    bottom: 30px;
+    bottom: 20px;
     right: 50%;
     transform: translate(50%, 0);
-    padding: 20px 20px;
+    padding: 20px 10px;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(247, 247, 247, 0.8);
   }
@@ -768,7 +768,7 @@ section {
   font-weight: 700;
   text-align: center;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .MainTraining .traning_con {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -882,17 +882,19 @@ section {
   margin: 0 0 5px 0;
 }
 .MainContact .inner .skills span {
-  line-height: 20px;
+  display: block;
+  line-height: 22px;
   font-weight: 300;
+  width: 60%;
 }
 .MainContact .inner .skills ul {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
 }
 .MainContact .inner .skills ul li {
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 300;
 }
-@media (width <= 390px) {
+@media (width <= 768px) {
   .MainContact .inner h2 {
     position: absolute;
     top: 50%;
@@ -951,4 +953,12 @@ section {
     line-height: 20px;
     font-weight: 300;
   }
+}
+
+.Footer {
+  padding: 60px 0 80px 0;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(9, 9, 9, 0.7);
 }/*# sourceMappingURL=style.css.map */
