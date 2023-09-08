@@ -130,11 +130,11 @@ section {
   top: 0;
   z-index: 999;
   height: 80px;
-  overflow: hidden;
   background: #fff;
   transition: height 0.5s;
 }
 .Header .inner {
+  overflow: hidden;
   border-radius: 10px;
   line-height: 80px;
   display: flex;
@@ -149,7 +149,6 @@ section {
   display: flex;
 }
 .Header .inner .gnb li {
-  flex: 1;
   font-size: 18px;
   font-weight: 300;
   padding: 0 15px;
@@ -168,9 +167,67 @@ section {
   }
   .Header .inner h1 {
     font-size: 16px;
+    z-index: 1000;
   }
   .Header .inner .gnb {
+    position: fixed;
+    inset: 0 0 0 0;
     display: none;
+    width: 0;
+  }
+  .Header .inner .gnb.on {
+    width: 100%;
+    height: 100vh;
+    background: #abff5a;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 0.4s ease-in;
+  }
+  .Header .inner .gnb.on li {
+    position: relative;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: #f9f9f9;
+    text-shadow: -1px 0px #00906c, 0px 1px #00906c, 1px 0px #00906c, 0px -1px #00906c;
+  }
+  .Header .inner .gnb.on li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #00906c;
+  }
+  .Header .inner .gnb.on li::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: #00906c;
+  }
+  .Header .inner .gnb.on li:hover {
+    background: inherit;
+    transition: 0.3s;
+  }
+  .Header .inner .gnb.on li:hover::before {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 120px;
+    transition: 0.4s ease-in-out;
+  }
+  .Header .inner .gnb.on li:hover::after {
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 120px;
+    transition: 0.4s ease-in-out;
   }
   .Header .mo_btn {
     position: fixed;
@@ -327,6 +384,7 @@ section {
 
 .MainIndex {
   padding: 160px 0;
+  overflow: hidden;
 }
 .MainIndex .text_move p {
   position: relative;
@@ -452,9 +510,10 @@ section {
   padding: 40px;
 }
 .MainProject .inner .project_wrap .project .pr_itm .con .left .desc span {
-  font-size: 15px;
-  color: #8f9193;
   display: block;
+  font-size: 15px;
+  padding: 5px 0 0 0;
+  color: #8f9193;
 }
 .MainProject .inner .project_wrap .project .pr_itm .con .left .info {
   display: grid;
@@ -471,8 +530,10 @@ section {
   font-weight: 700;
   margin: 0 0 10px 0;
 }
-.MainProject .inner .project_wrap .project .pr_itm .con .left .info > * h3 p {
-  font-weight: 15px;
+.MainProject .inner .project_wrap .project .pr_itm .con .left .info > * p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
 }
 .MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box {
   font-size: 0;
@@ -599,11 +660,11 @@ section {
 }
 @media (width <= 390px) {
   .MainProject .inner .pr_nav {
-    bottom: 40px;
+    bottom: 30px;
     right: 50%;
     transform: translate(50%, 0);
-    padding: 15px 20px;
-    border-radius: 20px;
+    padding: 20px 20px;
+    border-radius: 30px;
     box-shadow: 0 0 20px rgba(247, 247, 247, 0.8);
   }
   .MainProject .inner .pr_nav ul {
@@ -613,7 +674,7 @@ section {
   }
   .MainProject .inner .pr_nav ul li a {
     font-size: 14px;
-    padding: 10px;
+    padding: 15px;
   }
   .MainProject .inner .project_wrap .project .pr_itm {
     padding: 40px 20px 25px 20px;
@@ -657,6 +718,7 @@ section {
   }
   .MainProject .inner .project_wrap .project .pr_itm .con .left .info > * p {
     font-size: 14px;
+    line-height: 18px;
   }
   .MainProject .inner .project_wrap .project .pr_itm .con .left .info .color_box {
     flex-direction: inherit;
@@ -724,54 +786,109 @@ section {
 .MainContact {
   position: relative;
   height: 100vh;
-  padding: 100px 0;
+  padding: 80px 0;
   background: #f7f7f7;
 }
-.MainContact .inner {
+.MainContact .inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 250px), calc(-50% - 150px));
+  font-size: 40px;
+  font-weight: 700;
+}
+.MainContact .inner h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 60px;
+  width: 100%;
+  height: 1px;
+  background: #090909;
+}
+.MainContact .inner figure {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.MainContact .inner h2 {
-  font-size: 60px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0 0 60px 0;
-}
-.MainContact .inner ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.MainContact .inner ul li {
-  text-align: center;
-  border: 1px solid #090909;
-  border-radius: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ddd;
   overflow: hidden;
 }
-.MainContact .inner ul li a {
-  position: relative;
-  display: inline-block;
-  padding: 20px 0;
-  width: 300px;
-  z-index: 998;
-  font-size: 18px;
-  font-weight: 700;
-}
-.MainContact .inner ul li a::after {
-  content: "";
+.MainContact .inner .name {
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 270px));
+  text-align: center;
+}
+.MainContact .inner .name span {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+.MainContact .inner .name h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.MainContact .inner .name p {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 0 40px 0;
+}
+.MainContact .inner .name .contact {
+  display: flex;
+  gap: 10px;
+}
+.MainContact .inner .name .contact > li {
+  width: 60px;
+  height: 60px;
+  background: #090909;
+  border-radius: 10px;
+}
+.MainContact .inner .name .contact > li a {
+  display: block;
   width: 100%;
   height: 100%;
-  background: #abff5a;
-  transform: scaleX(0);
-  transform-origin: left;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #f9f9f9;
 }
-.MainContact .inner ul li a:hover::after {
-  transform: scaleX(1);
-  transition: 0.4s ease-in;
+.MainContact .inner .name .contact > li:hover {
+  transform: translate(0, -10px);
+  box-shadow: 0 10px 10px rgba(247, 247, 247, 0.5);
+  transition: 0.4s;
+  background: #00906c;
+}
+.MainContact .inner .skills {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 400px), -50%);
+}
+.MainContact .inner .skills strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.MainContact .inner .skills span {
+  line-height: 20px;
+  font-weight: 300;
+}
+.MainContact .inner .skills ul {
+  margin: 0 0 10px 0;
+}
+.MainContact .inner .skills ul li {
+  line-height: 20px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

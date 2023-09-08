@@ -5,7 +5,7 @@
     top: 0;
     z-index: 999;
     height: 80px;
-    overflow: hidden;
+
     background: #fff;
     transition: height 0.5s;
 
@@ -14,6 +14,7 @@
     // }
 
     .inner {
+        overflow: hidden;
         border-radius: 10px;
         line-height: 80px;
         display: flex;
@@ -30,17 +31,15 @@
             display: flex;
 
             li {
-                flex: 1;
+                // flex: 1;
                 font-size: 18px;
                 font-weight: 300;
                 padding: 0 15px;
-
 
                 &:hover {
                     background: $color-or;
                     transition: 0.3s;
                 }
-
             }
         }
     }
@@ -56,10 +55,75 @@
 
             h1 {
                 font-size: 16px;
+                z-index: 1000;
             }
 
             .gnb {
+                position: fixed;
+                inset: 0 0 0 0;
                 display: none;
+                width: 0;
+
+                &.on {
+                    width: 100%;
+                    height: 100vh;
+                    background: $color-lg;
+                    z-index: 999;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    transition: width 0.4s ease-in;
+
+                    li {
+                        position: relative;
+                        width: 100%;
+                        font-size: 30px;
+                        font-weight: 900;
+                        text-align: center;
+                        color: $color-w;
+                        text-shadow: -1px 0px $color-dg, 0px 1px $color-dg, 1px 0px $color-dg, 0px -1px $color-dg;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 10px;
+                            left: 0;
+                            width: 0;
+                            height: 1px;
+                            background: $color-dg;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 10px;
+                            right: 0;
+                            width: 0;
+                            height: 1px;
+                            background: $color-dg;
+                        }
+
+                        &:hover {
+                            background: inherit;
+                            transition: 0.3s;
+
+                            &::before {
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                width: 120px;
+                                transition: 0.4s ease-in-out;
+                            }
+
+                            &::after {
+                                right: 50%;
+                                transform: translate(50%, 0);
+                                width: 120px;
+                                transition: 0.4s ease-in-out;
+                            }
+                        }
+                    }
+                }
             }
         }
 

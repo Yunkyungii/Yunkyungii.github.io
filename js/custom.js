@@ -49,21 +49,44 @@ gsap.to('.move_r span', {
 
 
 // 메뉴 나타내기
-gsap.fromTo('.pr_nav', {
-    xPercent: 100,
-    opacity: 0,
-},
-    {
-        xPercent: 0,
-        opacity: 1,
-        duration: 0.5,
-        scrollTrigger: {
-            trigger: '.MainProject',
-            start: "top center",
-            end: "bottom center",
-            toggleActions: "play reverse play reverse"
-        },
-    })
+gsap.registerPlugin(ScrollTrigger);
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 800px)", () => {
+    gsap.fromTo('.pr_nav', {
+        xPercent: 100,
+        opacity: 0,
+    },
+        {
+            xPercent: 0,
+            opacity: 1,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: '.MainProject',
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "play reverse play reverse"
+            },
+        })
+});
+mm.add("(max-width: 768px)", () => {
+    gsap.fromTo('.pr_nav', {
+        yPercent: 100,
+        opacity: 0,
+    },
+        {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: '.MainProject',
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "play reverse play reverse"
+            },
+        })
+});
 
 
 // 메뉴이동
@@ -132,25 +155,9 @@ gsap.from('.traning_con', {
 
 
 
-
-
-
-// const MENU_BTN = document.querySelector('.btn');
-// const MENU = document.querySelector('.menu_con');
-// const CON = document.querySelector('.inner')
-//const BTN = document.querySelector('.btn');
-
-
-// MENU_BTN.addEventListener('click', e => {
-//     e.preventDefault();
-//     MENU.classList.toggle('on');
-//     CON.classList.toggle('on');
-
-
-// });
-
-
 const NAV = document.querySelectorAll('.gnb a');
+const M = document.querySelector('.Header .mo_btn');
+const N = document.querySelector('.gnb')
 
 NAV.forEach((it, idx) => {
     it.addEventListener('click', e => {
@@ -159,7 +166,22 @@ NAV.forEach((it, idx) => {
             duration: 1,
             scrollTo: e.target.hash
         })
-    })
+    });
+    N.classList.remove('on');
+});
+// 모바일
+M.addEventListener("click", function (e) {
+    M.addEventListener('click', (e) => {
+        e.preventDefault();
+        M.classList.toggle('on');
+        N.classList.toggle('on');
+    });
+})
+
+N.addEventListener('wheel', e => {
+    //e.preventDefault(); 이벤트 자체를 막음
+    e.stopPropagation(); // 이벤트의 전파를 막음.
+    console.log(e.deltaY) // 방향이 찍힌다. 
 });
 
 
@@ -176,16 +198,27 @@ SKIP.addEventListener("click", e => {
 
 
 
-// 모바일
-const M = document.querySelector('.Header .mo_btn');
-const N = document.querySelector('.gnb')
 
-M.addEventListener("click", function (e) {
-    M.addEventListener('click', (e) => {
-        e.preventDefault();
-        M.classList.toggle('on');
-        N.classList.toggle('on');
-    });
-})
+
+
+
+
+// const COVER_BTN = document.querySelector('.util');
+// const COVER = document.querySelector('.cover');
+// const COVER_A = document.querySelectorAll('.cover>ul a')
+
+// COVER_BTN.addEventListener('click', function (e) {
+//     e.currentTarget.classList.toggle('on');
+//     //this.classList.toggle('on');
+//     COVER.classList.toggle('on');
+// });
+
+// COVER_A.forEach((lnk, idx) => {
+//     lnk.addEventListener('click', () => {
+//         COVER.classList.remove('on');
+//         COVER_BTN.classList.remove('on');
+//         console.log(idx);
+//     });
+// });
 
 
